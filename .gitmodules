@@ -1,0 +1,3 @@
+[submodule "components/esp-bsp"]
+	path = components/esp-bsp
+	url = https://github.com/timoewald/esp-bsp_st7735.git
