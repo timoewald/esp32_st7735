@@ -1,4 +1,5 @@
 #include "esp_lvgl_port.h"
+#include "esp_lcd_st7735.h"
 #include "lvgl.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
@@ -34,7 +35,7 @@ void app_main(void)
 
     /* LCD driver initialization */
     esp_lcd_panel_handle_t lcd_panel_handle;
-    ESP_ERROR_CHECK(esp_lcd_new_panel_st7789(io_handle, &panel_config, &lcd_panel_handle));
+    ESP_ERROR_CHECK(esp_lcd_new_panel_st7735(io_handle, &panel_config, &lcd_panel_handle));
 
     /* Add LCD screen */
     const lvgl_port_display_cfg_t disp_cfg = {
